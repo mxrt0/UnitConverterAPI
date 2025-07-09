@@ -1,0 +1,93 @@
+.converter-container {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center;   /* Center children horizontally within the container */
+    margin: 20px auto;     /* Center the container on the page horizontally */
+    max-width: 400px;      /* Limit the width of the converter block */
+    padding: 20px;
+    border: 1px solid #e0e0e0; /* Light gray border for the whole box */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* A subtle shadow */
+    background-color: #fff; /* White background */
+}
+
+h1 {
+    margin-bottom: 25px; /* More space below the title */
+    color: #333; /* Darker text color */
+    font-size: 1.8em; /* Slightly larger title */
+    text-align: center;
+}
+
+/* Common styles for input groups (top and bottom rows) */
+.input-group,
+.conversion-target {
+    display: flex;       /* Use flexbox for horizontal arrangement */
+    align-items: center; /* Vertically align items in the middle */
+    width: 100%;         /* Make the group span the full width of the parent */
+    margin-bottom: 10px; /* Space between the two rows */
+    gap: 10px;           /* Space between elements within the group */
+    justify-content: flex-end; /* Align contents to the right within their 100% width */
+
+}
+
+/* Specific styling for the input field */
+.value-input {
+    flex-grow: 1; /* Allow the input to take up all available space */
+    padding: 10px 12px; /* More generous padding */
+    border: 1px solid #b0b0b0; /* Consistent border color */
+    border-radius: 5px; /* Slightly more rounded corners */
+    font-size: 1.05em; /* Slightly larger font */
+    color: #333;
+    font-size: 1.05em; /* Match the input's font size */
+    font-family: sans-serif; /* Explicitly set to match if needed */
+    font-weight: normal; /* Match the placeholder/input weight */
+    font-style: normal; /* Match the placeholder/input style */
+    /* To ensure placeholder fits without explicit width, rely on flex-grow */
+    min-width: 0; /* Important for flex items, prevents content from overflowing */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Styling for both select dropdowns to ensure they match */
+.unit-select {
+    padding: 10px 8px 8px; /* Match input padding, adjust horizontal for dropdown arrow */
+    border: 1px solid #b0b0b0; /* Match input border */
+    border-radius: 5px; /* Match input border-radius */
+    font-size: 1.05em; /* Match input font-size */
+    height: 40px; /* Explicit height to ensure exact match if needed */
+    background-color: #f9f9f9; /* Light background for select */
+    color: #333;
+    cursor: pointer;
+}
+
+
+/* Styling for the "Select unit to convert to:" text */
+.conversion-target .label-text {
+    margin-right: 10px; /* Pushes the text to the left, select to the right */
+    white-space: nowrap; /* Prevents text from wrapping */
+    color: #555; /* Slightly lighter text color */
+    font-size: 1.05em; /* Match the input's font size */
+    font-family: sans-serif; /* Explicitly set to match if needed */
+    font-weight: normal; /* Match the placeholder/input weight */
+    font-style: normal; /* Match the placeholder/input style */
+}
+
+/* Remove bottom margin from the last element to prevent extra space */
+.converter-container > *:last-child {
+    margin-bottom: 0;
+}
+
+#resultDisplay{
+    text-align: center;
+    font-size: 30px;
+}
+#resultBox {
+    flex-grow: 1; /* Allow the input to take up available space */
+    padding: 10px 12px;
+    border: 1px solid #b0b0b0;
+    border-radius: 5px;
+    font-size: 0.5em;
+    color: #333; /* Color for the actual result text */
+    background-color: #f0f0f0; /* A slightly different background to indicate it's read-only */
+    min-width: 0;
+    box-sizing: border-box;
+}

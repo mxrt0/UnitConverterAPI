@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Images/uc-icon.png" type="image/png">
+    <title>Unit Converter</title>
+</head>
+<body>
+<div class="converter-container">
+    <h1>Unit Converter</h1>
+
+    <div class="input-group">
+        <input type="text" class="value-input" placeholder="Enter value to convert from...">
+        <select class="unit-select">
+            <option id="g">g</option>
+            <option id="kg">kg</option> 
+            <option id="mg">mg</option> 
+            <option id="lbs">lbs</option> 
+            <option id="celsius">Celsius</option> 
+            <option id="fahrenheit">Fahrenheit</option>
+            <option id="kelvin">Kelvin</option>
+            <option id="mm">mm</option>
+            <option id="cm">cm</option>  
+            <option id="m">m</option>  
+            <option id="km">km</option> 
+            <option id="mi">mi</option>
+        </select>
+    </div>
+
+    <div class="conversion-target">
+        <span class="label-text">Select unit to convert to:</span>
+        <select class="unit-select">
+            <option id="g">g</option>
+            <option id="kg">kg</option> 
+            <option id="mg">mg</option> 
+            <option id="lbs">lbs</option> 
+            <option id="celsius">Celsius</option> 
+            <option id="fahrenheit">Fahrenheit</option>
+            <option id="kelvin">Kelvin</option>
+            <option id="mm">mm</option>
+            <option id="cm">cm</option>  
+            <option id="m">m</option>  
+            <option id="km">km</option> 
+            <option id="mi">mi</option>
+        </select>
+    </div>
+    
+</div>
+
+<div id="resultDisplay">
+    <span id="resultSpan">Result:</span> 
+    <input type="text" id="resultBox" class="result-input" readonly placeholder="Conversion Result">
+</div>  
+
+<script src="script.js"></script>
+</body>
+</html>

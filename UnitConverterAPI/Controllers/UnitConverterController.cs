@@ -26,13 +26,13 @@ namespace UnitConverterAPI.Controllers
                 {
                     return Ok(result.ResultValue);
                 }
-                
+                return BadRequest("Invalid conversion units.");
             }
             catch (Exception ex) 
             {
                 return BadRequest($"Invalid conversion: {ex.Message}");
             }
-            return BadRequest("Invalid conversion units.");
+            
             
 
         }
