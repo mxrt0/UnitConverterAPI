@@ -77,17 +77,27 @@ h1 {
 }
 
 #resultDisplay{
+    font-weight:normal;
     text-align: center;
-    font-size: 30px;
+    font-size: 30px;  
 }
 #resultBox {
     flex-grow: 1; /* Allow the input to take up available space */
     padding: 10px 12px;
     border: 1px solid #b0b0b0;
     border-radius: 5px;
-    font-size: 0.5em;
+    font-size: 0.8em;
     color: #333; /* Color for the actual result text */
     background-color: #f0f0f0; /* A slightly different background to indicate it's read-only */
     min-width: 0;
     box-sizing: border-box;
+}
+#convertBtn {
+    font-size: 25px;
+    font-family: arial; 
+    border-radius: 5px; 
+}
+#convertBtn:hover{
+    cursor:pointer;
+    transform:scale(1.05);
 }

@@ -8,45 +8,45 @@
     <title>Unit Converter</title>
 </head>
 <body>
-<div class="converter-container">
+<div id="converter" class="converter-container">
     <h1>Unit Converter</h1>
 
     <div class="input-group">
-        <input type="text" class="value-input" placeholder="Enter value to convert from...">
-        <select class="unit-select">
-            <option id="g">g</option>
-            <option id="kg">kg</option> 
-            <option id="mg">mg</option> 
-            <option id="lbs">lbs</option> 
-            <option id="celsius">Celsius</option> 
-            <option id="fahrenheit">Fahrenheit</option>
-            <option id="kelvin">Kelvin</option>
-            <option id="mm">mm</option>
-            <option id="cm">cm</option>  
-            <option id="m">m</option>  
-            <option id="km">km</option> 
-            <option id="mi">mi</option>
+        <input id ="valueToConvert" type="text" class="value-input" placeholder="Enter value to convert from...">
+        <select id ="selectFrom" class="unit-select">
+            <option value="g">g</option>
+            <option value="kg">kg</option> 
+            <option value="mg">mg</option> 
+            <option value="lbs">lbs</option> 
+            <option value="celsius">Celsius</option> 
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="kelvin">Kelvin</option>
+            <option value="mm">mm</option>
+            <option value="cm">cm</option>  
+            <option value="m">m</option>  
+            <option value="km">km</option> 
+            <option value="mi">mi</option>
         </select>
     </div>
 
     <div class="conversion-target">
         <span class="label-text">Select unit to convert to:</span>
-        <select class="unit-select">
-            <option id="g">g</option>
-            <option id="kg">kg</option> 
-            <option id="mg">mg</option> 
-            <option id="lbs">lbs</option> 
-            <option id="celsius">Celsius</option> 
-            <option id="fahrenheit">Fahrenheit</option>
-            <option id="kelvin">Kelvin</option>
-            <option id="mm">mm</option>
-            <option id="cm">cm</option>  
-            <option id="m">m</option>  
-            <option id="km">km</option> 
-            <option id="mi">mi</option>
+        <select id="selectTo" class="unit-select">
+            <option value="g">g</option>
+            <option value="kg">kg</option> 
+            <option value="mg">mg</option> 
+            <option value="lbs">lbs</option> 
+            <option value="celsius">Celsius</option> 
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="kelvin">Kelvin</option>
+            <option value="mm">mm</option>
+            <option value="cm">cm</option>  
+            <option value="m">m</option>  
+            <option value="km">km</option> 
+            <option value="mi">mi</option>
         </select>
     </div>
-    
+    <button id="convertBtn" type="submit">Convert</button>
 </div>
 
 <div id="resultDisplay">

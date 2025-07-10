@@ -1,3 +1,5 @@
+using UnitConverterAPI.Models;
+
 namespace UnitConverterAPI
 {
     public class Program
@@ -9,7 +11,7 @@ namespace UnitConverterAPI
             // Add services to the container.
 
             builder.Services.AddControllers();
-
+            builder.Services.AddSingleton<IConverterRepository, UnitConverterRepository>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

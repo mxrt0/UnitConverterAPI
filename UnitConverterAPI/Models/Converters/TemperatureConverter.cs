@@ -6,10 +6,10 @@
         new Dictionary<string, Func<double, double>>
         {
             {"celsius-fahrenheit", v => (v * 1.8) + 32 },
-            {"fahrenheit-celsius", v => (v - 32) * (5 / 9) },
+            {"fahrenheit-celsius", v => (v - 32) * 0.56 },
             {"celsius-kelvin", v => v + 273.15 },
             {"kelvin-celsius", v => v - 273.15 },
-            {"fahrenheit-kelvin", v => (v - 32) * (5 / 9) + 273.15},
+            {"fahrenheit-kelvin", v => (v - 32) * 0.56 + 273.15},
             {"kelvin-fahrenheit", v => (v - 273.15) * 1.8 + 32},
         };
 

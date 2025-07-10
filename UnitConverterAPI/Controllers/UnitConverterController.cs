@@ -14,23 +14,23 @@ namespace UnitConverterAPI.Controllers
             _converterRepo = converterRepo;
         }
 
-        [HttpGet("convert/value={value}&from={fromUnit}&to={toUnit}")]
-        public IActionResult Convert(double value, string fromUnit, string toUnit)
+        [HttpGet("convert/value={valueToConvert}&from={fromUnit}&to={toUnit}")]
+        public IActionResult Convert(double valueToConvert, string fromUnit, string toUnit)
         {
             try 
             {
                 (double ResultValue, bool Success) result =
-                _converterRepo.Convert(value, fromUnit.ToLower(), toUnit.ToLower());
+                _converterRepo.Convert(valueToConvert, fromUnit.ToLower(), toUnit.ToLower());
 
                 if (result.Success)
                 {
-                    return Ok(result.ResultValue);
+                    return Ok($"{result.ResultValue:f2}");
                 }
                 return BadRequest("Invalid conversion units.");
             }
             catch (Exception ex) 
             {
-                return BadRequest($"Invalid conversion: {ex.Message}");
+                return BadRequest($"Inversion failed: {ex.Message}");
             }
             
             
